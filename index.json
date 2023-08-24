@@ -1,3 +1,16 @@
+import random
+
+# Generate a list of random account numbers in the specified range with the given prefix
+account_numbers = [f"100000{random.randint(100, 999)}" for _ in range(10)]  # Change '10' to the desired number of account numbers
+
+# Save the account numbers to an "account_number.txt" file
+output_file = "account_number.txt"
+with open(output_file, "w") as f:
+    for num in account_numbers:
+        f.write(num + "\n")
+
+print("Account numbers saved to", output_file)
+
 {
     "name": "Default",
     "lists": [
